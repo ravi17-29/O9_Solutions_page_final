@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "express": "^4.18.3"
+  },
+  "name": "o9solution_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
