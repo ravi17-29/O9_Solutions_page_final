@@ -35,73 +35,22 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-// import MarkdownIt from 'markdown-it';
 
-// const md = new MarkdownIt();
-//   MarkdownIT=() =>{
-//     const [markdownContent, setMarkdownContent] = React.useState('');
 
-//     const fetchMarkdownContent = async (fileName) => {
-//         try {
-//             const response = await fetch(`/markdown/${fileName}.md`);
-//             const data = await response.text();
-//             setMarkdownContent(md.render(data));
-//         } catch (error) {
-//             console.error('Error fetching Markdown content:', error);
-//         }
-//     }
-//   };
 
-// const StyledComponent = () => {
-//   return (
-//     <div style={{
-//       position: "fixed",
-//       top: "calc(100px + 50px)",
-//       right: "10px",
-//       backgroundColor: "lightblue",
-//       padding: "10px",
-//       borderRadius: "5px",
-//       overflowY: "auto" // Add overflowY for vertical scrolling
-//     }}>
-//       <Verticalnav></Verticalnav>
-//     </div>
-//   );
-// };
-
-const handleActionColumnClick = () => {
-  // Execute your desired function here
-  // <StyledComponent></StyledComponent>
-  console.log("Action Column clicked!");
-};
 
 export function SidebarWithBurgerMenu() {
   const [open, setOpen] = React.useState(0);
   const [childOpen, setChildOpen] = React.useState(false);
   const [grandchildOpen, setGrandchildOpen] = React.useState(false);
-  const [openAlert, setOpenAlert] = React.useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
-  const [showStyledComponent, setShowStyledComponent] = React.useState(false);
+  // const [flag, setFlag] = React.useState(false);
 
-  // const handleActionColumnClick = () => {
-  //   // Toggle the state to show/hide the StyledComponent
-  //   setShowStyledComponent(!showStyledComponent);
-  //   console.log("Action Column clicked!");
-  // };
-  const [flag, setFlag] = React.useState(false);
-
-  const [selectedFileName, setSelectedFileName] = React.useState(""); // State to store the selected filename
+  // const [selectedFileName, setSelectedFileName] = React.useState(""); // State to store the selected filename
 
   // Function to handle the click event and open the file
-  const alternatefun = () => {
-    setSelectedFileName("Forward.md"); // Set the selected filename
-    setFlag(true); // Show the Md1 component
-  };
 
-  const handleItemClick = (component) => {
-    // Perform an action with the component
-    console.log("Item clicked:", component);
-  };
 
   const handleOpen = (index) => {
     //console.log(index);
@@ -136,6 +85,7 @@ export function SidebarWithBurgerMenu() {
           <Bars3Icon className="h-8 w-8 stroke-2" />
         )}
       </IconButton>
+      
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
         <Card
           color="transparent"
@@ -211,7 +161,7 @@ export function SidebarWithBurgerMenu() {
                               />
                             </ListItemPrefix>
                             <button
-                              onClick={handleActionColumnClick}
+                              // onClick={handleActionColumnClick}
                               className="flex items-center outline-none">
                               <Typography
                                 color="blue-gray"
@@ -224,8 +174,8 @@ export function SidebarWithBurgerMenu() {
                         </ListItem>
 
                         {/* Grandchild accordion body */}
-                        <AccordionBody className="py-1">
-                          <List className="p-0">
+                        <AccordionBody className="py-0">
+                          <List className="px-12" >
                             <ListItem>
                               <Link to="/ellipsis">Ellipse</Link>
                             </ListItem>
@@ -233,7 +183,7 @@ export function SidebarWithBurgerMenu() {
                         </AccordionBody>
 
                         <AccordionBody className="py-1">
-                          <List className="p-0">
+                          <List className="px-12">
                             <ListItem>
                               <Link to="/linkfill">Link Filter</Link>
                             </ListItem>
@@ -241,7 +191,7 @@ export function SidebarWithBurgerMenu() {
                         </AccordionBody>
 
                         <AccordionBody className="py-1">
-                          <List className="p-0">
+                          <List className="px-12">
                             <ListItem>
                               <Link to="/forwardfill">Forward</Link>
                             </ListItem>
@@ -249,7 +199,7 @@ export function SidebarWithBurgerMenu() {
                         </AccordionBody>
 
                         <AccordionBody className="py-1">
-                          <List className="p-0">
+                          <List className="px-12">
                             <ListItem>
                               <Link to="/hamburgerfill">Hamburger</Link>
                             </ListItem>

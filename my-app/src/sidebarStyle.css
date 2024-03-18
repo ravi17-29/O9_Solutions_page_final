@@ -1,0 +1,9 @@
+/* Add this to your CSS file */
+.main-content {
+    transition: left 0.3s ease; /* Smooth transition */
+   }
+   
+   .main-content.sidebar-open {
+    left: 220px; /* Adjust based on your sidebar's width */
+   }
+   

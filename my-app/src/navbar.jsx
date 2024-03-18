@@ -27,41 +27,59 @@ export default function StickyNavbar() {
 
 
  
-  const navList = (
-    <ul className="flex flex-col lg:flex-row lg:items-center justify-start">
-      <Typography
-        as="li"
-        variant="big"
-        color="white"
-        className="p-1 font-normal" // Add ml-auto class
+  // const navList = (
+  //   <ul className="flex flex-col lg:flex-row lg:items-center justify-start">
+  //     <Typography
+  //       as="li"
+  //       variant="big"
+  //       color="white"
+  //       className="p-1 font-normal text-left" // Add ml-auto class
         
-      >
-        <a
-          href="https://www.google.com/"
-          className="flex items-center"
-          target="_blank"           // Open link in new tab
-          rel="noopener noreferrer" // Security attributes
-        >
-          Support
-        </a>
-      </Typography>
-    </ul>
-  );
+  //     >
+  //       <a
+  //         href="https://www.google.com/"
+  //         className="flex items-center"
+  //         target="_blank"           // Open link in new tab
+  //         rel="noopener noreferrer" // Security attributes
+  //       >
+  //         Support
+  //       </a>
+  //     </Typography>
+  //   </ul>
+  // );
  
   return (
-    <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-black">
+    <div id="navbar" className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-1 lg:px-8 lg:py-4 bg-black">
         <div className="flex items-center justify-between text-white">
         {/* <StickySidebar></StickySidebar> */}
         <Typography
   as={Link} // Use Link from react-router-dom
   to="http://localhost:3000" // Specify the URL to route to port 3000
-  className="mr-auto cursor-pointer py-1.5 font-medium"
+  className="text-left cursor-pointer py-1.5 font-medium"
 >
   Home
 </Typography>
+
+
+<Typography
+ as="li"
+ variant="big"
+ color="white"
+ className=" mr-auto p-1 font-normal" // Removed text-left from here
+>
+ <a
+    href="https://www.google.com/"
+    className="flex items-center text-left" // Added text-left here
+    target="_blank"           // Open link in new tab
+    rel="noopener noreferrer" // Security attributes
+ >
+    Support
+ </a>
+</Typography>
+
           <div className="flex items-center gap-4">
-  <div className="ml-auto lg:mr-4 lg:block">{navList}</div>
+  {/* <div className="lg:mr-4 lg:block">{navList}</div> */}
   <div className="flex items-center gap-x-1">
     
     <PrintButton />

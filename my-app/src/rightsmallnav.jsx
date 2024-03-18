@@ -98,16 +98,7 @@ export default function App() {
       </header>
       <main>
         <Md1 fileName="Ellipsis.md" />
-        {/* <Md1 fileName="Forward.md" />
-        <Md1 fileName="Hamburger.md" />
-        <Md1 fileName="Link_filter.md" />     */}
-        {/* <Md1 fileName="Ellipsis.md" /> */}
-        {/* {ids.map((id) => (
-          <section key={`section-${id}`} id={id} className="section">
-          
-            {capitalize(id)}
-          </section>
-        ))} */}
+       
       </main>
     </>
   );

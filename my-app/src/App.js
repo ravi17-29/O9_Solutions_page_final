@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes  } from "react-router-dom";
 import Sidebar from "./sidebar.jsx";
 import StickyNavbar from "./navbar.jsx";
-
+import "./App.css"
 import Rightnav from "./rightsmallnav.jsx";
 import Righnavforward from "./rightNavforward.jsx";
 import Rightnavhamburger from "./rightnavHamburger.jsx";
@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       
-      <div style={{ display: "flex", alignItems: "start", gap: "20px" }}>
+      <div style={{ display: "flex", alignItems: "start", gap: "20px", position: "fixed", minWidth: "100vw"}}>
         
         {/* Flexbox container with gap */}
         <Sidebar />
